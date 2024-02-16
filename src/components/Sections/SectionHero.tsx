@@ -1,10 +1,10 @@
 import Button from "../Button";
-
+import Underline from "@/components/Icon/Underline";
 export default function SectionHero() {
   return (
-    <section className="">
+    <section>
       <div className="absolute inset-0 mt-32">
-        <img src="/bg.png" className="object-cover" />
+        <img src="/bg.png" className="object-cover" height={800} />
       </div>
       <Tagline />
       <DescriptionTagLine />
@@ -16,49 +16,24 @@ export default function SectionHero() {
 
 function Tagline() {
   return (
-    <div className="flex flex-col items-center gap-y-3 max-w-[1280px] mx-auto text-[64px] font-bold text-slate-900 mt-20 font-rubik">
+    <div className="flex flex-col items-center gap-y-3 max-w-[1280px] mx-auto text-5xl min-[1440px]:text-[64px] font-bold text-slate-900 mt-36 font-rubik">
       <div>Your Secure Gateway to</div>
-      <div>
-        <span className="relative">
-          {" "}
+      <div className="flex gap-x-2 max-[915px]:flex-col max-[915px]:gap-y-5  ">
+        <div className="relative max-[915px]:mx-auto">
           Decentralized
-          <div className="absolute left-10 -bottom-6">
-            <Undelline />
+          <div className="absolute -left-2 min-[1440px]:left-10 -bottom-6">
+            <Underline />
           </div>
-        </span>{" "}
-        Document Management
+        </div>
+        <span>Document Management</span>
       </div>
     </div>
-  );
-}
-function Undelline() {
-  return (
-    <svg
-      width="353"
-      height="33"
-      viewBox="0 0 353 33"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M3.27727 18.3779C3.27727 18.3779 222.669 -0.326662 345.839 14.6231"
-        stroke="#FFB840"
-        stroke-width="5"
-        stroke-linecap="round"
-      />
-      <path
-        d="M3.75471 14.8352C3.75471 14.8352 227.334 3.52901 350.11 22.3561"
-        stroke="#FFB840"
-        stroke-width="5"
-        stroke-linecap="round"
-      />
-    </svg>
   );
 }
 
 function DescriptionTagLine() {
   return (
-    <div className="mt-10 text-center max-w-[1020px] mx-auto text-xl text-[#060606]/80 font-rubik">
+    <div className="mt-12 text-center max-w-[1020px] mx-auto text-xl text-[#060606]/80 font-rubik">
       Specifically crafted for individuals who demand a trustworthy platform for
       managing sensitive documents like KYC details, expense bills, and much
       more, right from their mobile devices.
@@ -68,7 +43,7 @@ function DescriptionTagLine() {
 
 function ButtonAction() {
   return (
-    <div className="flex justify-center mt-6 mb-10">
+    <div className="flex justify-center mt-10 mb-0 lg:mb-36">
       <Button className="!py-4 !px-6">Get Started</Button>
       <Button variant="ghost" className="underline hover:!bg-transparent">
         Try free demo
@@ -79,10 +54,8 @@ function ButtonAction() {
 
 function HeroShotIlustration() {
   return (
-    <div className="flex justify-center z-50 relative">
+    <div className="flex justify-center relative max-w-[900px] mx-auto ">
       <svg
-        width="1044"
-        height="696"
         viewBox="0 0 1044 696"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
