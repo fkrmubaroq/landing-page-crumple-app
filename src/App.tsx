@@ -4,6 +4,7 @@ import SectionKeyFeatures from "@/components/Sections/SectionKeyFeatures";
 import SectionTargetAudience from "@/components/Sections/SectionTargetAudience";
 import SectionFeedback from "@/components/Sections/SectionFeedback";
 import SectionGetStarted from "@/components/Sections/SectionGetStarted";
+import Footer from "@/components/Layout/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SectionTargetAudience />
       <SectionFeedback />
       <SectionGetStarted />
+      <Footer />
     </>
   );
 }

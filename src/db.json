@@ -16,5 +16,45 @@
       "name": "Developers",
       "link": "#"
     }
+  ],
+  "footer": [
+    {
+      "title": "LINKS",
+      "links": [
+        {
+          "text": "Home",
+          "href": "#"
+        },
+        {
+          "text": "Pricing",
+          "href": "#"
+        },
+        {
+          "text": "Contact Us",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "LEGAL",
+      "links": [
+        {
+          "text": "Terms of use",
+          "href": "#"
+        },
+        {
+          "text": "Terms & conditions",
+          "href": "#"
+        },
+        {
+          "text": "Privacy policy",
+          "href": "#"
+        },
+        {
+          "text": "Cookie policy",
+          "href": "#"
+        }
+      ]
+    }
   ]
 }
