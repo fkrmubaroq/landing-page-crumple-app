@@ -4,10 +4,11 @@ const variantButton = {
   colors: {
     black: "bg-black text-white hover:bg-slate-800",
     ghost: "bg-transparent hover:bg-slate-100",
+    white: "bg-white text-black hover:bg-gray-100",
   },
 };
 
-type TVariant = "black" | "ghost";
+type TVariant = "black" | "ghost" | "white";
 type TButton = React.ComponentPropsWithoutRef<"button"> & {
   variant?: TVariant;
 };

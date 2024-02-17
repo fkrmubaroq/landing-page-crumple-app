@@ -6,10 +6,12 @@ export default function SectionHero() {
       <div className="absolute inset-0 mt-32">
         <img src="/bg.png" className="object-cover" height={800} />
       </div>
-      <Tagline />
-      <DescriptionTagLine />
-      <ButtonAction />
-      <HeroShotIlustration />
+      <div className="relative">
+        <Tagline />
+        <DescriptionTagLine />
+        <ButtonAction />
+        <HeroShotIlustration />
+      </div>
     </section>
   );
 }
@@ -33,7 +35,7 @@ function Tagline() {
 
 function DescriptionTagLine() {
   return (
-    <div className="mt-12 text-center max-w-[1020px] mx-auto text-xl text-[#060606]/80 font-rubik">
+    <div className="mt-12 text-center max-w-[1020px] mx-auto text-2xl text-black/55 leading-[36px] font-rubik">
       Specifically crafted for individuals who demand a trustworthy platform for
       managing sensitive documents like KYC details, expense bills, and much
       more, right from their mobile devices.

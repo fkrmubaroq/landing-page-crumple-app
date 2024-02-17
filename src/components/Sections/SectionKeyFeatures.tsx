@@ -9,7 +9,7 @@ import SimplicityIcon from "../Icon/Sections/SimplicityIcon";
 
 export default function SectionKeyFeatures() {
   return (
-    <section className="mt-28 max-w-[1280px] mx-auto mb-64">
+    <section className="mt-28 max-w-[1280px] mx-auto mb-36">
       <KeyFeatures />
       <div className="mt-28 flex flex-col gap-y-20">
         <SectionTwoColumn
@@ -32,7 +32,6 @@ export default function SectionKeyFeatures() {
           icon={<SecurityIcon />}
           title="Advanced Encryption"
           description="With top-tier encryption protocols, your data's security is our priority. This feature is especially crucial for handling sensitive personal and financial documents, ensuring they remain shielded from unauthorized access."
-          swap
         />
         <RectangleIcon />
         <SectionTwoColumn
@@ -40,6 +39,7 @@ export default function SectionKeyFeatures() {
           icon={<FlexibilityIcon />}
           title="Mobile Accessibility"
           description="Embrace the freedom of managing your documents anytime, anywhere. Crumple App's mobile-first design offers unmatched convenience in document management."
+          swap
         />
         <RectangleIcon />
         <SectionTwoColumn
@@ -47,7 +47,6 @@ export default function SectionKeyFeatures() {
           icon={<SimplicityIcon />}
           title="User-Friendly Interface"
           description="Navigating the app is a breeze, thanks to our intuitive interface designed for users of all tech levels."
-          swap
         />
       </div>
     </section>
