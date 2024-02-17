@@ -1,7 +1,7 @@
 export default function EfficiencyIcon() {
   return (
     <svg
-      width="444"
+      width="100%"
       height="293"
       viewBox="0 0 544 293"
       fill="none"

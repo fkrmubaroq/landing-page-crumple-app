@@ -1,7 +1,6 @@
 export default function RectangleIcon() {
   return (
     <svg
-      width="1168"
       height="14"
       viewBox="0 0 1168 14"
       fill="none"

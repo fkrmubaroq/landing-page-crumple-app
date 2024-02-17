@@ -1,4 +1,11 @@
 import { SecondaryUnderline } from "../Icon/Underline";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 
 const listItem = [
   {
@@ -23,23 +30,43 @@ export default function SectionTargetAudience() {
   return (
     <section className="flex flex-col justify-center gap-y-3 items-center mb-32 max-w-[1280px] mx-auto">
       <div className="text-black/55 tracking-wider">Target Audience</div>
-      <div className="relative font-normal font-rubik text-5xl mb-16">
+      <div className="relative font-normal font-rubik text-2xl sm:text-3xl lg:text-5xl mb-16">
         Ideal For
-        <div className="absolute -left-12 -bottom-10">
+        <div className="absolute -bottom-7">
           <SecondaryUnderline />
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <Swiper
+        className="w-full mx-auto px-5 pb-10"
+        pagination={true}
+        modules={[Pagination]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          968: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
+      >
         {listItem.map((item, key) => (
-          <CardItem
-            key={key}
-            src={item.src}
-            title={item.title}
-            description={item.description}
-          />
+          <SwiperSlide key={key}>
+            <CardItem
+              key={key}
+              src={item.src}
+              title={item.title}
+              description={item.description}
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }

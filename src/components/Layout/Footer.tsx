@@ -13,7 +13,7 @@ type TFooter = {
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-[#F7FAFF]">
-      <div className="flex px-11 py-20">
+      <div className="flex flex-col lg:flex-row px-11 py-20">
         <Logo />
         <FooterLinkItem data={footer} />
         <JoinWithUs />
@@ -25,29 +25,33 @@ export default function Footer() {
 
 function Logo() {
   return (
-    <div className="basis-[400px] shrink-0">
+    <div className="w-full h-[100px] sm:w-[400px] sm:h-[150px] shrink-0">
       <img src="/logo.png" width={218} height={30} />
     </div>
   );
 }
 function FooterLinkItem({ data }: { data: TFooter[] }) {
-  return data.map((item, key) => (
-    <div className="flex flex-col font-inter shrink-0 basis-[300px]" key={key}>
-      <div className="text-black/80 font-inter font-medium tracking-wider uppercase mb-5">
-        {item.title}
-      </div>
-      {item.links.map((link, key) => (
-        <div className="leading-10" key={key}>
-          {link.text}
+  return (
+    <div className="flex xl:flex-row flex-col gap-y-7">
+      {data.map((item, key) => (
+        <div className="flex flex-col font-inter shrink-0 w-[300px]" key={key}>
+          <div className="text-black/80 font-inter font-medium tracking-wider uppercase mb-5">
+            {item.title}
+          </div>
+          {item.links.map((link, key) => (
+            <div className="leading-10" key={key}>
+              {link.text}
+            </div>
+          ))}
         </div>
       ))}
     </div>
-  ));
+  );
 }
 
 function JoinWithUs() {
   return (
-    <div className="flex flex-col gap-y-5 font-inter w-full pl-10">
+    <div className="flex flex-col gap-y-5 font-inter w-full lg:pl-10 lg:mt-0 mt-10">
       <div className="uppercase tracking-wider text-black/80">
         GET STARTED TODAY!
       </div>
@@ -81,9 +85,9 @@ function InputEmail() {
 
 function Copyright() {
   const d = new Date();
-  let year = d.getFullYear();
+  const year = d.getFullYear();
   return (
-    <div className="flex justify-between py-6 border-t text-[#999] border-t-gray-200 px-11">
+    <div className="flex justify-between text-sm sm:text-base sm:flex-row flex-col sm:gap-y-0 gap-y-3 py-6 border-t text-[#999] border-t-gray-200 px-11">
       <div>Privacy & Terms.</div>
       <div>Copyright @{year} CrumpleApp</div>
       <div>

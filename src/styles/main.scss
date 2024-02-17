@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination.swiper-pagination-bullets{
+  @apply -bottom-0;
+}

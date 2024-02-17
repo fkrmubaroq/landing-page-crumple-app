@@ -12,9 +12,9 @@ const headerMenuItems: THeaderMenu[] = data.header;
 export default function Header() {
   return (
     <header className="flex justify-between max-w-[1280px] mx-auto py-10 lg:px-0 lg:items-start items-center px-10">
-      <span>
+      <div className="max-[600px]:w-[150px] w-[218px]">
         <img src="/logo.png" width={218} height={30} />
-      </span>
+      </div>
       <MenuItems menus={headerMenuItems} />
       <div className="lg:flex hidden gap-x-3">
         <ButtonAction />
@@ -30,10 +30,10 @@ function MenuItems({ menus }: { menus: THeaderMenu[] }) {
       {/* MOBILE */}
       <div className="lg:hidden block">
         <div
-          className="w-14 h-14 bg-gray-900 text-white flex justify-center items-center rounded-lg"
+          className="w-12 h-12 bg-gray-900 text-white flex justify-center items-center rounded-lg"
           onClick={() => setOpened((o) => !o)}
         >
-          <RxHamburgerMenu size={30} />
+          <RxHamburgerMenu size={26} />
         </div>
         <DropdownMobileMenu
           menus={menus}

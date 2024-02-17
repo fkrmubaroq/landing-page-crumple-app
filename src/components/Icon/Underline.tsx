@@ -1,8 +1,15 @@
-export default function Underline() {
+type TUnderline = {
+  width?: string;
+  height?: string;
+};
+export default function Underline({
+  width = "100%",
+  height = "33",
+}: TUnderline) {
   return (
     <svg
-      width="353"
-      height="33"
+      width={width}
+      height={height}
       viewBox="0 0 353 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -10,24 +17,27 @@ export default function Underline() {
       <path
         d="M3.27727 18.3779C3.27727 18.3779 222.669 -0.326662 345.839 14.6231"
         stroke="#FFB840"
-        stroke-width="5"
-        stroke-linecap="round"
+        strokeWidth="5"
+        strokeLinecap="round"
       />
       <path
         d="M3.75471 14.8352C3.75471 14.8352 227.334 3.52901 350.11 22.3561"
         stroke="#FFB840"
-        stroke-width="5"
-        stroke-linecap="round"
+        strokeWidth="5"
+        strokeLinecap="round"
       />
     </svg>
   );
 }
 
-export function SecondaryUnderline() {
+export function SecondaryUnderline({
+  width = "100%",
+  height = "33",
+}: TUnderline) {
   return (
     <svg
-      width="294"
-      height="30"
+      width={width}
+      height={height}
       viewBox="0 0 294 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

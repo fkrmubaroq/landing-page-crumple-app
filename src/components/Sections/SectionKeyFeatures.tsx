@@ -11,7 +11,7 @@ export default function SectionKeyFeatures() {
   return (
     <section className="mt-28 max-w-[1280px] mx-auto mb-36">
       <KeyFeatures />
-      <div className="mt-28 flex flex-col gap-y-20">
+      <div className="mt-20 md:mt-28 flex flex-col gap-y-7 md:gap-y-20">
         <SectionTwoColumn
           context="Freedom"
           icon={<FreedomIcon />}
@@ -56,13 +56,15 @@ export default function SectionKeyFeatures() {
 function KeyFeatures() {
   return (
     <div className="flex justify-center items-center flex-col gap-y-4">
-      <span className="text-black/55">Key Features</span>
-      <div className="flex gap-x-2 flex-col gap-y-2 text-6xl items-center font-normal font-rubik">
+      <span className="text-black/55 sm:text-base text-sm">Key Features</span>
+      <div className="flex gap-x-2 flex-col gap-y-2 min-[360px]:text-xl min-[450px]:text-2xl min-[600px]:text-3xl min-[1440px]:text-6xl items-center font-normal font-rubik">
         <div>Experience the future of</div>
-        <div className="flex gap-x-2 relative max-[915px]:mx-auto">
-          stress-free
-          <div className="absolute -left-3 -bottom-8">
-            <Underline />
+        <div className="flex gap-x-2">
+          <div className="flex gap-x-2 relative max-[915px]:mx-auto">
+            stress-free
+            <div className="absolute  -bottom-6">
+              <Underline />
+            </div>
           </div>
           <span>Document Management</span>
         </div>
@@ -87,18 +89,20 @@ function SectionTwoColumn({
   swap,
 }: TSection) {
   return (
-    <section className="flex pt-12 px-20 justify-between items-center">
-      <div className={cn("flex flex-col gap-y-3", { "order-2": swap })}>
-        <div className="uppercase tracking-[2px] text-black/55">{context}</div>
-        <div className="text-[#101621] text-[40px] font-rubik -ml-1">
+    <section className="flex pt-12 lg:flex-row flex-col gap-x-5 px-10 sm:px-20 justify-between items-center">
+      <div className={cn("flex flex-col gap-y-3", { "lg:order-2": swap })}>
+        <div className="uppercase tracking-[2px] text-black/55 lg:text-base text-sm">
+          {context}
+        </div>
+        <div className="text-[#101621] min-[360px]:text-2xl md:text-3xl lg:text-[40px] font-rubik -ml-0.5">
           {title}
         </div>
-        <div className="text-[#73737B] font-inter text-xl leading-[35px] font-light max-w-[560px]">
+        <div className="text-[#73737B] font-inter min-[360px]:leading-[30px]  min-[360px]:text-base  md:text-lg lg:text-xl mt-3 lg:leading-[37px] font-light max-w-[560px]">
           {description}
         </div>
       </div>
 
-      {icon}
+      <div className="max-w-[400px]">{icon}</div>
     </section>
   );
 }

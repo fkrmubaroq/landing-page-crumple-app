@@ -1,7 +1,7 @@
 export default function FlexibilityIcon() {
   return (
     <svg
-      width="360"
+      width="100%"
       height="361"
       viewBox="0 0 360 361"
       fill="none"
